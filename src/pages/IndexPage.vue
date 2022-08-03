@@ -1,35 +1,26 @@
 <template>
-  <q-page padding>
-    <q-btn
-      label="click me"
-      color="green"
-    />
-    <q-card style="width: 350px">
-      <q-card-section class="bg-blue text-white">
-        My Card
-      </q-card-section>
-      <q-card-section>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque aperiam, obcaecati delectus ea quos minus vel vero nobis eaque amet officia illum hic, alias necessitatibus corporis magni excepturi soluta itaque.
-      </q-card-section>
+  <q-page class="row">
+    <q-card class="col-xs-9">
+      <q-toolbar class="bg-primary" />
+      <q-list>
+        <q-item>
+          <q-item-section side>
+            <q-checkbox :model-value="true" />
+          </q-item-section>
+          <q-item-section>
+            Go Shopping
+          </q-item-section>
+          <q-item-section side>
+            <q-btn
+              icon="mdi-delete"
+              flat
+              round
+              size="sm"
+            />
+          </q-item-section>
+        </q-item>
+      </q-list>
     </q-card>
-    <q-select
-      v-model="selected"
-      outlined
-      label="outlined"
-      :options="['Luke', 'shannen', 'lilly']"
-    />
-    <q-select
-      v-model="selected"
-      borderless
-      label="borderless"
-      :options="['Luke', 'shannen', 'lilly']"
-    />
-    <q-select
-      v-model="selected"
-      filled
-      label="filled"
-      :options="['Luke', 'shannen', 'lilly']"
-    />
   </q-page>
 </template>
 
