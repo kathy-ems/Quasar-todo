@@ -1,8 +1,21 @@
 <template>
   <q-page class="row">
     <q-card class="col-xs-9">
-      <q-toolbar class="bg-primary" />
-      <q-list>
+      <q-toolbar>
+        <!-- dense = makes input smaller -->
+        <q-input
+          borderless
+          dense
+          placeholder="Search"
+          class="full-width"
+          :model-value="search"
+        >
+          <template #append>
+            <q-icon name="mdi-magnify" />
+          </template>
+        </q-input>
+      </q-toolbar>
+      <q-list bordered>
         <q-item>
           <q-item-section side>
             <q-checkbox :model-value="true" />
@@ -27,12 +40,12 @@
 <script>
 import { defineComponent } from 'vue'
 
-// Options API vs Compsition API (later will conver to CompositionAPI)
+// Options API, not Compsition API (later will conver to CompositionAPI)
 export default defineComponent({
   name: 'IndexPage',
   data () {
     return {
-      selected: null
+      search: ''
     }
   }
 })
